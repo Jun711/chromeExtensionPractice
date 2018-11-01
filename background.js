@@ -2,7 +2,7 @@ console.log('background running');
 
 function buttonClicked(tab) {
     let msg = {
-        txt: 'setBackgroundColor'
+        purpose: 'setBackgroundColor'
     }
     chrome.tabs.sendMessage(tab.id, msg)
 }
