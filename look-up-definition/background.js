@@ -2,9 +2,9 @@ console.log('background running');
 
 chrome.runtime.onMessage.addListener(receiver);
 
-let word = "";
+window.word = "";
 
 function receiver(request, sender, sendResponse) {
     console.log(request);
-    word = request.text;
+    window.word = request.text;
 }

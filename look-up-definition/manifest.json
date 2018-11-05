@@ -16,5 +16,6 @@
   "browser_action": {
     "default_popup": "index.html",
     "default_title": "Jun711"
-  }
+  },
+  "content_security_policy": "script-src 'self' https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/p5.js https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/addons/p5.dom.js; object-src 'self'"
 }
