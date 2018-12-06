@@ -4,7 +4,7 @@ chrome.runtime.onMessage.addListener(gotMessage);
 
 function xhr() {
   let xhr = new XMLHttpRequest();
-  let apiEndpoint = 'https://a2futq1qbh.execute-api.us-east-1.amazonaws.com/Mock/incr-tts';
+  let apiEndpoint = 'https://ohgh53izc9.execute-api.us-east-1.amazonaws.com/Dev/mock';
 
   xhr.open('POST', apiEndpoint);
   
@@ -27,7 +27,7 @@ function xhr() {
 }
 
 function fetchData() {
-  let apiEndpoint = 'https://a2futq1qbh.execute-api.us-east-1.amazonaws.com/Mock/incr-tts';
+  let apiEndpoint = 'https://ohgh53izc9.execute-api.us-east-1.amazonaws.com/Dev/mock';
 
   fetch(apiEndpoint, {
       method: 'POST',
@@ -39,10 +39,12 @@ function fetchData() {
       },
       referrer: 'client',
       referrerPolicy: 'origin',
+      body: JSON.stringify({ data: 'mock' })
     })
     .then(res => {
       if (res.ok) {
         console.log('fetch invokeCorsBackground res: ', res);
+        return
       }
       throw new Error('something went wrong')
     })
